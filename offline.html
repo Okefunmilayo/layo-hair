@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FFD700">
+    <title>Offline - LAYO HAIR</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <style>
+        .offline-page {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-6);
+            text-align: center;
+        }
+
+        .offline-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(var(--primary-rgb), 0.15);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-6);
+            color: var(--primary);
+        }
+
+        .offline-icon svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .offline-title {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-3);
+        }
+
+        .offline-text {
+            color: var(--text-muted);
+            max-width: 300px;
+            margin-bottom: var(--space-6);
+        }
+
+        .retry-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            background: var(--primary);
+            color: var(--text-dark);
+            border-radius: var(--radius-lg);
+            font-weight: var(--font-medium);
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .retry-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-page">
+        <div class="offline-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="1" y1="1" x2="23" y2="23"/>
+                <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/>
+                <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/>
+                <path d="M10.71 5.05A16 16 0 0 1 22.58 9"/>
+                <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+                <line x1="12" y1="20" x2="12.01" y2="20"/>
+            </svg>
+        </div>
+        <h1 class="offline-title">You're Offline</h1>
+        <p class="offline-text">
+            It looks like you've lost your internet connection.
+            Please check your connection and try again.
+        </p>
+        <button class="retry-btn" onclick="window.location.reload()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 4v6h-6"/>
+                <path d="M1 20v-6h6"/>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+            </svg>
+            Try Again
+        </button>
+    </div>
+</body>
+</html>

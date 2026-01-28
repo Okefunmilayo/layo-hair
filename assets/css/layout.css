@@ -1,0 +1,411 @@
+/* ===== LAYO HAIR - Layout System ===== */
+/* Mobile-First WebApp - Grid & Layout Utilities */
+
+/* ===== CONTAINER ===== */
+
+.container {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.container-sm {
+    max-width: var(--container-sm);
+}
+
+.container-md {
+    max-width: var(--container-md);
+}
+
+.container-lg {
+    max-width: var(--container-lg);
+}
+
+/* ===== GRID SYSTEM ===== */
+
+.grid {
+    display: grid;
+    gap: var(--space-4);
+}
+
+/* Auto-fit responsive grid */
+.grid-auto {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Fixed column grids */
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive grid columns */
+@media (max-width: 767px) {
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 479px) {
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-auto {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Service Grid (2 columns on mobile, more on larger) */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-4);
+    }
+}
+
+@media (min-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== FLEXBOX UTILITIES ===== */
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+/* ===== GAP UTILITIES ===== */
+
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+
+/* ===== SPACING UTILITIES ===== */
+
+/* Margin */
+.m-0 { margin: 0; }
+.m-auto { margin: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.my-auto { margin-top: auto; margin-bottom: auto; }
+
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+
+/* Padding */
+.p-0 { padding: 0; }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+.p-4 { padding: var(--space-4); }
+.p-6 { padding: var(--space-6); }
+.p-8 { padding: var(--space-8); }
+
+.px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
+.py-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
+.py-6 { padding-top: var(--space-6); padding-bottom: var(--space-6); }
+.py-8 { padding-top: var(--space-8); padding-bottom: var(--space-8); }
+
+/* ===== WIDTH & HEIGHT ===== */
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.min-h-screen { min-height: 100vh; min-height: 100dvh; }
+
+/* ===== POSITION ===== */
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+.inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* ===== DISPLAY ===== */
+
+.hidden { display: none; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline-flex { display: inline-flex; }
+
+/* Responsive display */
+@media (max-width: 767px) {
+    .hidden-mobile { display: none !important; }
+}
+
+@media (min-width: 768px) {
+    .hidden-tablet { display: none !important; }
+    .show-mobile { display: none !important; }
+}
+
+@media (min-width: 1024px) {
+    .hidden-desktop { display: none !important; }
+    .show-tablet { display: none !important; }
+}
+
+/* ===== OVERFLOW ===== */
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-x-auto { overflow-x: auto; }
+.overflow-y-auto { overflow-y: auto; }
+
+/* Horizontal scroll container (for mobile carousels) */
+.scroll-x {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll-x::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-x > * {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+/* ===== DIVIDERS ===== */
+
+.divider {
+    height: 1px;
+    background: var(--border-light);
+    margin: var(--space-4) 0;
+}
+
+.divider-gold {
+    background: var(--border-gold);
+}
+
+/* ===== ASPECT RATIOS ===== */
+
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+    aspect-ratio: 16 / 9;
+}
+
+.aspect-portrait {
+    aspect-ratio: 3 / 4;
+}
+
+/* ===== SAFE AREAS (for mobile notches) ===== */
+
+.safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+}
+
+.safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-x {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* ===== BOOKING LAYOUT ===== */
+
+.booking-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - var(--header-height) - var(--bottom-nav-height));
+    min-height: calc(100dvh - var(--header-height) - var(--bottom-nav-height));
+}
+
+.booking-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-4);
+    padding-bottom: var(--space-20);
+}
+
+.booking-footer {
+    position: fixed;
+    bottom: var(--bottom-nav-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border-light);
+    padding: var(--space-4);
+    padding-bottom: calc(var(--space-4) + var(--safe-area-bottom));
+    z-index: var(--z-sticky);
+}
+
+@media (min-width: 1024px) {
+    .booking-layout {
+        flex-direction: row;
+        gap: var(--space-8);
+        max-width: var(--container-xl);
+        margin: 0 auto;
+        padding: var(--space-8);
+    }
+
+    .booking-content {
+        flex: 1;
+        padding: 0;
+        padding-bottom: 0;
+    }
+
+    .booking-sidebar {
+        width: 380px;
+        flex-shrink: 0;
+        position: sticky;
+        top: calc(var(--header-height) + var(--space-8));
+        height: fit-content;
+    }
+
+    .booking-footer {
+        position: static;
+        padding: 0;
+        border: none;
+        background: transparent;
+    }
+}
+
+/* ===== HERO SECTION LAYOUT ===== */
+
+.hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-8) var(--space-4);
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 10, 10, 0.7) 0%,
+        rgba(10, 10, 10, 0.5) 50%,
+        rgba(10, 10, 10, 0.9) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+}
